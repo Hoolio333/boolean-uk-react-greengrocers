@@ -6,6 +6,7 @@ import { useState } from 'react'
 import storeItems from './store-items'
 import StoreItem from './StoreItem'
 import CartItem from './CartItem'
+import Total from './Total'
 
 const initialStoreItems = storeItems
 
@@ -70,12 +71,7 @@ export default function App() {
           </ul>
         </div>
         <div className="total-section">
-          <div>
-            <h3>Total</h3>
-          </div>
-          <div>
-            <span className="total-number">£0.00</span>
-          </div>
+          <Total cart={cartItems} />
         </div>
       </main>
       <div>
